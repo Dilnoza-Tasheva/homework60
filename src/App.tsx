@@ -55,7 +55,8 @@ const App = () => {
 
 
   return (
-    <div className="container">
+    <div className="container mb-5 mt-5">
+      <h5>Chat box: </h5>
       <MessagesList messages={messages}/>
       <MessageItem sendMessage={sendMessage}/>
     </div>

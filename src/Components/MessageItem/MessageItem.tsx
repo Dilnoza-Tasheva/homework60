@@ -19,9 +19,9 @@ const MessageItem: React.FC<Props> = ({sendMessage}) => {
 
   return (
     <div className="container mt-4">
-      <h4>Send a message</h4>
+      <h5>Send a message</h5>
       <form onSubmit={submitForm} className="form-inline">
-        <div className="form-group mr-2">
+        <div className="form-group mt-2">
           <input
             className="form-control"
             type="text"
@@ -31,7 +31,7 @@ const MessageItem: React.FC<Props> = ({sendMessage}) => {
             required
           />
         </div>
-        <div className="form-group mr-2">
+        <div className="form-group mt-2">
           <input
             type="text"
             className="form-control"
@@ -41,7 +41,7 @@ const MessageItem: React.FC<Props> = ({sendMessage}) => {
             required
           />
         </div>
-        <button className="btn btn-success" type="submit">Send</button>
+        <button className="btn btn-success mt-2 mb-4" type="submit">Send</button>
       </form>
     </div>
 
