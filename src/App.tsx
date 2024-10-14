@@ -21,7 +21,7 @@ const App = () => {
     }
   };
 
-  const sendMessage = async () => {
+  const sendMessage = async (author: string, message: string) => {
     const url = 'http://146.185.154.90:8000/messages';
     const data = new URLSearchParams();
     data.set('message', message);
