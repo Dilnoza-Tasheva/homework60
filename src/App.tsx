@@ -1,4 +1,4 @@
-import './App.css'
+
 import MessagesList from './Components/Messages/Messages.tsx';
 import MessageItem from './Components/MessageItem/MessageItem.tsx';
 import { useEffect, useState } from 'react';
