@@ -21,6 +21,28 @@ const App = () => {
     }
   };
 
+  const sendMessage = async () => {
+    const url = 'http://146.185.154.90:8000/messages';
+    const data = new URLSearchParams();
+    data.set('message', message);
+    data.set('author', author);
+
+    try {
+      const response = await fetch(url, {
+        method: POST,
+        body: data,
+      });
+
+      if (!response.ok) {
+        throw new Error('Erroro sending the message')
+      }
+
+      console.log('Message sent')
+    } catch (error) {
+      console.log('Error:', error)
+    }
+  };
+
 
   useEffect(() => {
 
@@ -32,12 +54,10 @@ const App = () => {
   }, []);
 
 
-
-
   return (
     <>
       <MessagesList messages={messages}/>
-      <MessageItem/>
+      <MessageItem sendMessage={sendMessage}/>
     </>
   )
 };
