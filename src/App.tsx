@@ -55,10 +55,10 @@ const App = () => {
 
 
   return (
-    <>
+    <div className="container">
       <MessagesList messages={messages}/>
       <MessageItem sendMessage={sendMessage}/>
-    </>
+    </div>
   )
 };
 
