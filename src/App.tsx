@@ -34,7 +34,7 @@ const App = () => {
       });
 
       if (!response.ok) {
-        throw new Error('Erroro sending the message')
+        throw new Error('Error sending the message')
       }
 
       console.log('Message sent')

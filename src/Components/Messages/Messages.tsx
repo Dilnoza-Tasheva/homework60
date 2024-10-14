@@ -10,10 +10,9 @@ const MessagesList: React.FC<Props> = ({messages}) => {
     <div>
       <ul>
         {messages.map(msg => (
-          <li key={msg.id}>
-            <strong>{msg.author}</strong>: {msg.message}</li>
+          <li key={msg._id}>
+            <strong>{msg.author}</strong>: {msg.message} <br/> {new Date(msg.datetime).toLocaleString()}</li>
         ))}
-
       </ul>
     </div>
   );
