@@ -17,7 +17,7 @@ const App = () => {
       const data: Message[] = await response.json();
       setMessages(data);
     } catch (error) {
-      console.log('Error receiving the message');
+      console.log('Error receiving the message', error);
     }
   };
 
@@ -29,7 +29,7 @@ const App = () => {
 
     try {
       const response = await fetch(url, {
-        method: POST,
+        method: 'POST',
         body: data,
       });
 
