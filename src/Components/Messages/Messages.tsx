@@ -1,13 +1,22 @@
+import { Message } from '../../types';
+import * as React from 'react';
 
+interface Props {
+  messages: Message[];
+}
 
-const Messages = () => {
+const MessagesList: React.FC<Props> = ({messages}) => {
   return (
     <div>
       <ul>
-        <li><strong>Author and message</strong></li>
+        {messages.map(msg => (
+          <li key={msg.id}>
+            <strong>{msg.author}</strong>: {msg.message}</li>
+        ))}
+
       </ul>
     </div>
   );
 };
 
-export default Messages;
+export default MessagesList;
